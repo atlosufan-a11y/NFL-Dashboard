@@ -1,0 +1,9 @@
+{
+  "name": "Film Room — NFL Season Analysis",
+  "short_name": "Film Room",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0E1216",
+  "theme_color": "#0E1216",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

@@ -1,0 +1,68 @@
+name: Update data & deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */3 * * *"       # scores, schedule, win probabilities — every 3 hours
+    - cron: "47 1,13,19 * * *"   # + sportsbook lines, 3x a day (~270 of the 500 free Odds API credits a month)
+  workflow_dispatch:
+    inputs:
+      odds:
+        description: "Also refresh sportsbook lines"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+      - name: Refresh data
+        if: github.event_name != 'push'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          WITH_ODDS: ${{ github.event.schedule == '47 1,13,19 * * *' || (github.event_name == 'workflow_dispatch' && inputs.odds) }}
+        run: |
+          if [ "$WITH_ODDS" = "true" ]; then npm run update-data:odds; else npm run update-data; fi
+
+      - name: Commit data changes
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          if git diff --cached --quiet; then echo "No data changes"; exit 0; fi
+          git commit -m "Update NFL data"
+          git push
+
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

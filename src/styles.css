@@ -1,0 +1,65 @@
+:root {
+  --bg: #0E1216;
+  --panel: #171E25;
+  --panel-soft: #1F2830;
+  --line: #2A343E;
+  --text: #E7ECF0;
+  --muted: #8795A2;
+  --chalk: #F4D35E;
+  --win: #4BA85E;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); }
+body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-text-size-adjust: 100%; }
+button, input, select { font-family: inherit; }
+button:disabled { opacity: 0.45; cursor: default !important; }
+
+.app { min-height: 100vh; padding-bottom: 60px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 24px; }
+.content { padding-block: 20px; }
+
+.masthead {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #12181E 0%, #0E1216 100%);
+  padding-top: 22px;
+}
+
+.tabs { display: flex; gap: 4px; margin-top: 16px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  background: transparent; border: none; cursor: pointer; padding: 10px 14px; white-space: nowrap;
+  font-size: 13.5px; font-weight: 600; color: var(--muted); border-bottom: 2px solid transparent;
+}
+.tab.active { color: var(--chalk); border-bottom-color: var(--chalk); }
+.tab:focus-visible, .price-cell:focus-visible { outline: 2px solid var(--chalk); outline-offset: 2px; }
+
+.live-dot {
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--win);
+  margin-right: 5px; vertical-align: 1px;
+}
+
+/* Betting: lines board */
+.lines-grid {
+  display: grid; grid-template-columns: 90px 1fr 1fr; gap: 8px; margin-top: 14px; align-items: stretch;
+}
+.lines-label {
+  font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 700;
+  align-self: center;
+}
+.price-cell {
+  display: flex; flex-direction: column; gap: 2px; align-items: flex-start; text-align: left;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;
+  cursor: pointer; color: var(--text); min-width: 0;
+}
+.price-cell:hover { border-color: var(--chalk); }
+.price-cell span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+
+@media (max-width: 600px) {
+  .wrap { padding-inline: 16px; }
+  .lines-grid { grid-template-columns: 1fr 1fr; }
+  .lines-label { grid-column: 1 / -1; margin-top: 4px; }
+}
