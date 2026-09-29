@@ -1,5 +1,4 @@
 [
-  {"id":"2026-3-PHI-CHI","season":2026,"wk":3,"kickoff":"2026-09-29T00:15:00.000Z","away":"PHI","home":"CHI","awayWinProb":64.6,"homeWinProb":35.2},
   {"id":"2026-4-PIT-CLE","season":2026,"wk":4,"kickoff":"2026-10-02T00:15:00.000Z","away":"PIT","home":"CLE","awayWinProb":55.4,"homeWinProb":44.3},
   {"id":"2026-4-IND-WAS","season":2026,"wk":4,"kickoff":"2026-10-04T13:30:00.000Z","away":"IND","home":"WAS","awayWinProb":53.9,"homeWinProb":45.8},
   {"id":"2026-4-NE-BUF","season":2026,"wk":4,"kickoff":"2026-10-04T17:00:00.000Z","away":"NE","home":"BUF","awayWinProb":28.8,"homeWinProb":71},
