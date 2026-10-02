@@ -46,5 +46,6 @@
   {"id":"2026-3-NYJ-DET","season":2026,"wk":3,"date":"2026-09-27","away":"NYJ","home":"DET","awayPts":24,"homePts":31,"awayYds":335,"homeYds":381,"awayTO":1,"homeTO":0},
   {"id":"2026-3-SEA-WAS","season":2026,"wk":3,"date":"2026-09-27","away":"SEA","home":"WAS","awayPts":31,"homePts":33,"awayYds":437,"homeYds":258,"awayTO":3,"homeTO":0},
   {"id":"2026-3-TEN-NYG","season":2026,"wk":3,"date":"2026-09-27","away":"TEN","home":"NYG","awayPts":7,"homePts":12,"awayYds":262,"homeYds":238,"awayTO":2,"homeTO":0},
-  {"id":"2026-3-PHI-CHI","season":2026,"wk":3,"date":"2026-09-28","away":"PHI","home":"CHI","awayPts":7,"homePts":27,"awayYds":248,"homeYds":375,"awayTO":3,"homeTO":0}
+  {"id":"2026-3-PHI-CHI","season":2026,"wk":3,"date":"2026-09-28","away":"PHI","home":"CHI","awayPts":7,"homePts":27,"awayYds":248,"homeYds":375,"awayTO":3,"homeTO":0},
+  {"id":"2026-4-PIT-CLE","season":2026,"wk":4,"date":"2026-10-01","away":"PIT","home":"CLE","awayPts":24,"homePts":27,"awayYds":361,"homeYds":372,"awayTO":2,"homeTO":2}
 ]
