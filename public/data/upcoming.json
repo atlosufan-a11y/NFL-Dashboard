@@ -1,7 +1,7 @@
 [
-  {"id":"2026-4-IND-WAS","season":2026,"wk":4,"kickoff":"2026-10-04T13:30:00.000Z","away":"IND","home":"WAS","awayWinProb":55,"homeWinProb":44.6},
+  {"id":"2026-4-IND-WAS","season":2026,"wk":4,"kickoff":"2026-10-04T13:30:00.000Z","away":"IND","home":"WAS","awayWinProb":56.4,"homeWinProb":43.3},
   {"id":"2026-4-NE-BUF","season":2026,"wk":4,"kickoff":"2026-10-04T17:00:00.000Z","away":"NE","home":"BUF","awayWinProb":29.3,"homeWinProb":70.5},
-  {"id":"2026-4-NYJ-CHI","season":2026,"wk":4,"kickoff":"2026-10-04T17:00:00.000Z","away":"NYJ","home":"CHI","awayWinProb":37.1,"homeWinProb":62.6},
+  {"id":"2026-4-NYJ-CHI","season":2026,"wk":4,"kickoff":"2026-10-04T17:00:00.000Z","away":"NYJ","home":"CHI","awayWinProb":31.9,"homeWinProb":67.8},
   {"id":"2026-4-JAC-CIN","season":2026,"wk":4,"kickoff":"2026-10-04T17:00:00.000Z","away":"JAC","home":"CIN","awayWinProb":54.4,"homeWinProb":45.3},
   {"id":"2026-4-ARI-NYG","season":2026,"wk":4,"kickoff":"2026-10-04T17:00:00.000Z","away":"ARI","home":"NYG","awayWinProb":52.5,"homeWinProb":47.1},
   {"id":"2026-4-LA-PHI","season":2026,"wk":4,"kickoff":"2026-10-04T17:00:00.000Z","away":"LA","home":"PHI","awayWinProb":63.7,"homeWinProb":36},
